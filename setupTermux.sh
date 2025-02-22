@@ -1,8 +1,9 @@
-#!/data/data/com.termux/files/usr/bin/sh
+#!/data/data/com.termux/files/usr/bin
 # This script installs required packages, sets up storage access,
 # creates a boot script for auto-starting SSH, and starts SSH immediately.
 
-pin="sefghai"
+read -p "Set password for termux: " pin 
+# pin="sefghai"
 
 # Update package list and upgrade packages first
 apt update -y && apt upgrade -y
@@ -20,14 +21,11 @@ echo "password: $pin"
 
 # Set up storage access (only needed once)
 termux-setup-storage
-
 # Create the Termux:Boot directory if it doesn't exist
 mkdir -p $HOME/.termux/boot
-
 # Create a boot script for starting ssh on boot
 BOOT_SCRIPT="$HOME/.termux/boot/AutoSSh.sh"
-
-cat > "$BOOT_SCRIPT" << 'EOF'
+cat > "$BOOT_SCRIPT"<< 'EOF'
 #!/data/data/com.termux/files/usr/bin/sh
 # Prevent device from sleeping
 termux-wake-lock
