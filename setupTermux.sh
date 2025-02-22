@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin
+#!/data/data/com.termux/files/usr/bin/sh
 # This script installs required packages, sets up storage access,
 # creates a boot script for auto-starting SSH, and starts SSH immediately.
 
@@ -195,5 +195,3 @@ echo "vncserver" >> .zshrc
 echo "vncserver password is your rdp session password!!" >> .zshrc
 echo "ip?" >> .zshrc
 echo "termux-wake-lock" >> .zshrc
-
-
