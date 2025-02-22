@@ -55,8 +55,8 @@ echo "Setup complete. The SSH server will auto-start on boot."
 pkg update
 pkg upgrade -y
 
-#installinig desktop interface
-curl -Lf https://raw.githubusercontent.com/sabamdarif/termux-desktop/main/setup-termux-desktop -o setup-termux-desktop
+# Installing Termux Desktop Interface
+curl -Lf https://raw.githubusercontent.com/shiva1485/Server-In-Phone/refs/heads/main/setup-termux-desktop.sh -o setup-termux-desktop
 chmod +x setup-termux-desktop
 ./setup-termux-desktop
 
