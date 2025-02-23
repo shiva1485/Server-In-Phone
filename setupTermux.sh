@@ -56,7 +56,10 @@ pkg update
 pkg upgrade -y
 
 # Installing Termux Desktop Interface
-curl -Lf https://raw.githubusercontent.com/shiva1485/Server-In-Phone/refs/heads/main/setup-termux-desktop.sh -o setup-termux-desktop
+# curl -Lf https://raw.githubusercontent.com/shiva1485/Server-In-Phone/refs/heads/main/setup-termux-desktop.sh -o setup-termux-desktop
+# chmod +x setup-termux-desktop
+# ./setup-termux-desktop
+curl -Lf https://raw.githubusercontent.com/sabamdarif/termux-desktop/main/setup-termux-desktop -o setup-termux-desktop
 chmod +x setup-termux-desktop
 ./setup-termux-desktop
 
